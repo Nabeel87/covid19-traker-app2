@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
   tittle:{
-    color: '#3f51b5'
+    color: '#3f51b5',
+    transform: 'uppercase',
   },
 }));
 
@@ -46,7 +47,8 @@ export default function InfoPanel() {
             <Grid item xs={12} sm={4} key={index}>
               <Paper className={classes.paper} elevation={3}>
                 <h3 className={classes.tittle}>
-                  {val.toUpperCase().replace(/_/g,' ' )}
+                  {/* {val.toUpperCase().replace(/_/g,' ' )} */}
+                  {val.replace(/_/g,' ' )}
                 </h3>
                 <h3>{globalData[val]}</h3>
               </Paper>
